@@ -189,8 +189,8 @@ async function saveToDatabase(properties) {
       // Analizar con lexicón
       const analysis = analyzeProperty(property)
       
-      // Solo guardar si tiene riesgo >= 5
-      if (analysis.riskScore < 5) {
+      // Solo guardar si tiene riesgo >= 2
+      if (analysis.riskScore < 2) {
         skipped++
         continue
       }
@@ -234,7 +234,7 @@ async function saveToDatabase(properties) {
   
   console.log(`\n📈 RESUMEN:`)
   console.log(`   Total analizadas: ${properties.length}`)
-  console.log(`   Sospechosas (score >=5): ${suspicious}`)
+  console.log(`   Sospechosas (score >=2): ${suspicious}`)
   console.log(`   Guardadas en BD: ${saved}`)
   console.log(`   Descartadas (score <5): ${skipped}`)
 }
@@ -253,7 +253,7 @@ async function updateDistrictScores() {
       .from('properties')
       .select('*', { count: 'exact', head: true })
       .eq('district_id', district.id)
-      .gte('risk_score', 7)
+    
     
     // Calcular score del distrito (simplificado)
     let districtScore = 1
