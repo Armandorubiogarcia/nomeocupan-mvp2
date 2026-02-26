@@ -41,7 +41,7 @@ export default function Home() {
 
           {/* CTA Principal */}
           <Link 
-            href="/cuestionario"
+            href="/checkout"
             className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-12 py-4 rounded-lg transition-all transform hover:scale-105 shadow-2xl"
           >
             Analizar mi vivienda ahora
@@ -174,7 +174,7 @@ export default function Home() {
               No esperes a convertirte en una estadística más.
             </p>
             <Link 
-              href="/cuestionario"
+              href="/checkout"
               className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-12 py-4 rounded-lg transition-all transform hover:scale-105 shadow-xl"
             >
               Protege tu vivienda ahora
@@ -242,7 +242,7 @@ export default function Home() {
             </div>
 
             <Link 
-              href="/cuestionario"
+              href="/checkout"
               className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold text-xl px-16 py-5 rounded-lg transition-all transform hover:scale-105 shadow-xl mb-4"
             >
               Obtener mi informe ahora
